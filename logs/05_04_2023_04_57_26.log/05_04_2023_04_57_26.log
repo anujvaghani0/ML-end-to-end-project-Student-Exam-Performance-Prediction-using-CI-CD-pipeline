@@ -1,0 +1,36 @@
+[ 2023-05-04 04:57:26,207 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[ 2023-05-04 04:57:26,207 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-05-04 04:57:38,185 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:57:38] "GET / HTTP/1.1" 200 -
+[ 2023-05-04 04:57:38,261 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:57:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:57:41,913 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:57:41] "GET / HTTP/1.1" 200 -
+[ 2023-05-04 04:58:11,381 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:11] "GET / HTTP/1.1" 200 -
+[ 2023-05-04 04:58:12,059 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:12] "GET /predictdata HTTP/1.1" 200 -
+[ 2023-05-04 04:58:14,618 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "GET /predictdata HTTP/1.1" 200 -
+[ 2023-05-04 04:58:14,627 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,630 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,633 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,635 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,637 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,639 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,642 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "GET /predictdata HTTP/1.1" 200 -
+[ 2023-05-04 04:58:14,646 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,648 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,650 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,652 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,656 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:14,658 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-05-04 04:58:35,264 ] 1741 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+TypeError: PredictPipeline.predict() takes 1 positional argument but 2 were given
+[ 2023-05-04 04:58:35,267 ] 224 werkzeug - INFO - 127.0.0.1 - - [04/May/2023 04:58:35] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

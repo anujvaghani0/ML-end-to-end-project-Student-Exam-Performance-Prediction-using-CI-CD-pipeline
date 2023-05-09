@@ -1,0 +1,19 @@
+[ 2023-05-03 12:13:42,572 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[ 2023-05-03 12:13:42,572 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-05-03 12:13:46,550 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 12:13:46] "GET / HTTP/1.1" 200 -
+[ 2023-05-03 12:13:52,901 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 12:13:52] "GET /predictdata HTTP/1.1" 200 -
+[ 2023-05-03 12:14:11,878 ] 1741 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+TypeError: PredictPipeline.predict() takes 1 positional argument but 2 were given
+[ 2023-05-03 12:14:11,881 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 12:14:11] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

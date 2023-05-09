@@ -1,0 +1,13 @@
+prefix=/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/venv
+exec_prefix=/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/venv
+libdir=/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/venv/lib
+sharedlibdir=/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/venv/lib
+includedir=/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

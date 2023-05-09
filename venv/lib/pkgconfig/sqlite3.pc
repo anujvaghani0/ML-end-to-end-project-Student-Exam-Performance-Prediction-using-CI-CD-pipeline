@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/venv
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.41.2
+Libs: -L${libdir} -lsqlite3
+Libs.private: -lz 
+Cflags: -I${includedir}

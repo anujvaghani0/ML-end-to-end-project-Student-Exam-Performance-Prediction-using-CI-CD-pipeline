@@ -1,0 +1,11 @@
+prefix=/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/venv
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+toolexeclibdir=${libdir}
+includedir=/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/venv/include
+
+Name: libffi
+Description: Library supporting Foreign Function Interfaces
+Version: 3.4.2
+Libs: -L${toolexeclibdir} -lffi
+Cflags: -I${includedir}

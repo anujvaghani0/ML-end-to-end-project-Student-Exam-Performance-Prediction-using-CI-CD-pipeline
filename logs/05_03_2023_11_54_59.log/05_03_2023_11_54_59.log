@@ -1,0 +1,53 @@
+[ 2023-05-03 11:54:59,424 ] 224 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[ 2023-05-03 11:54:59,424 ] 224 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-05-03 11:55:00,470 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 11:55:00] "GET /predictdata HTTP/1.1" 200 -
+[ 2023-05-03 11:55:19,443 ] 1741 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/src/pipeline/predict_pipeline.py", line 13, in predict
+    model_path=os.path.join("artifacts","model.pkl")
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+  File "/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/src/pipeline/predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/src/pipeline/predict_pipeline.py] line number [13] error message[name 'os' is not defined]
+[ 2023-05-03 11:55:19,446 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 11:55:19] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2023-05-03 11:56:30,086 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 11:56:30] "GET /predictdata HTTP/1.1" 200 -
+[ 2023-05-03 11:57:54,012 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 11:57:54] "GET / HTTP/1.1" 200 -
+[ 2023-05-03 11:57:58,855 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 11:57:58] "GET /predictdata HTTP/1.1" 200 -
+[ 2023-05-03 11:59:15,778 ] 1741 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/src/pipeline/predict_pipeline.py", line 13, in predict
+    model_path=os.path.join("artifacts","model.pkl")
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/anujvaghani0/anaconda3/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+  File "/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/src/pipeline/predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [/Users/anujvaghani0/Desktop/project/ML End To End Projects using CI:CD pipeline/src/pipeline/predict_pipeline.py] line number [13] error message[name 'os' is not defined]
+[ 2023-05-03 11:59:15,780 ] 224 werkzeug - INFO - 127.0.0.1 - - [03/May/2023 11:59:15] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
